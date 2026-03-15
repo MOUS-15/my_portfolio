@@ -1,3 +1,4 @@
+
 body{
     height: 100vh;
     background-image: linear-gradient(135deg,#0a192f 0%,#020c1b 100%)
@@ -226,4 +227,52 @@ p{
     }
     50%{box-shadow: 0 0 20px #00d4ff;}
 }
+/* --- Responsive Adjustments --- */
 
+@media (max-width: 1024px) {
+    .content {
+        flex-direction: column; /* يخلي الأقسام تحت بعض */
+        gap: 40px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .skills {
+        margin-left: 0; /* إلغاء الـ margin في الموبايل */
+        margin-top: 50px;
+        justify-items: center;
+    }
+
+    .about-of-me {
+        height: auto; /* يخلي الطول مرن حسب الكلام */
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .summary {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+
+    .icons ul {
+        flex-wrap: wrap; /* لو الأيقونات كتير تنزل سطر جديد */
+        gap: 10px;
+        transform: translate(0, 0); /* تصحيح الـ translate */
+    }
+
+    .icons ul li a {
+        font-size: 30px; /* تصغير الأيقونات شوية للموبايل */
+    }
+}
